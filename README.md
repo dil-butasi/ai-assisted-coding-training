@@ -8,6 +8,7 @@ A React-based Todo application built with TypeScript, Material UI, and Atlas UI 
 
 - ✅ Create, read, update, and delete todo items
 - ✅ Mark todos as completed
+- ✅ Session persistence (todos survive page refreshes)
 - ✅ Responsive design with Material UI
 - ✅ TypeScript for type safety
 - ✅ React Context for state management
@@ -68,6 +69,21 @@ This project is set up to work seamlessly with various AI coding assistants:
 - For Claude Code, see [CLAUDE.md](./CLAUDE.md)
 
 These files contain helpful information for AI tools to understand the project's structure, patterns, and practices.
+
+## Session Persistence
+
+The application automatically saves your todos to your browser's session storage, ensuring your list persists across page refreshes within the same browser session. Key features:
+
+- **Automatic saving**: Todos are saved immediately when you add, edit, delete, or complete them
+- **Session scope**: Data persists only within the current browser session (cleared when browser is closed)
+- **Error handling**: Graceful handling of storage quota limits with user notifications
+- **Data validation**: Corrupt or invalid data is automatically cleared without crashing the app
+
+### Limitations
+
+- Data is not synced across different browser tabs or devices
+- Storage is limited to the browser's session storage quota
+- Data is lost when the browser session ends (browser is closed)
 
 ## License
 
